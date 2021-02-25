@@ -1,0 +1,128 @@
+<div class="row" *ngIf="deviceXl">
+  <div class="col-lg-8 form-group">
+    <div>
+      <h1>ALX</h1>
+    </div>
+  </div>
+  <div class="col-lg-4 form-group">
+    <form [formGroup]="myForm" (ngSubmit)="submitForm()" novalidate>
+
+      <div class="row">
+        <div class="col-xl-5 form-group">
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="EmailID" formControlName="emailId" type="email">
+          </mat-form-field>
+
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xl-5 form-group">
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Password" formControlName="password" type="password">
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div class="button-wrapper">
+        <button mat-flat-button color="primary">Submit</button>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="row" *ngIf="deviceMd">
+  <div class="col-md-8 form-group">
+    <div>
+      <h1>ALX</h1>
+    </div>
+  </div>
+  <div class="col-md-4 form-group">
+    <form [formGroup]="myForm" (ngSubmit)="submitForm()" novalidate>
+
+      <div class="row">
+        <div class="col-xl-5 form-group">
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="EmailID" formControlName="emailId" type="email">
+          </mat-form-field>
+
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xl-5 form-group">
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Password" formControlName="password" type="password">
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div class="button-wrapper">
+        <button mat-flat-button color="primary">Submit</button>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="row" *ngIf="deviceSm">
+  <div class="col-sm-8 form-group">
+    <div>
+      <h1>ALX</h1>
+    </div>
+  </div>
+  <div class="col-sm-4 form-group">
+    <form [formGroup]="myForm" (ngSubmit)="submitForm()" novalidate>
+
+      <div class="row">
+        <div class="col-xl-5 form-group">
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="EmailID" formControlName="emailId" type="email">
+          </mat-form-field>
+
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xl-5 form-group">
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Password" formControlName="password" type="password">
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div class="button-wrapper">
+        <button mat-flat-button color="primary">Submit</button>
+      </div>
+    </form>
+  </div>
+</div>
+<div *ngIf="deviceXs">
+  <div class="row">
+    <div class="col-xs-8 form-group">
+      <div>
+        <h1>ALX</h1>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-4 form-group">
+      <form [formGroup]="myForm" (ngSubmit)="submitForm()" novalidate>
+
+        <div class="row">
+          <div class="col-xl-5 form-group">
+            <mat-form-field class="example-full-width">
+              <input matInput placeholder="EmailID" formControlName="emailId" type="email">
+            </mat-form-field>
+
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xl-5 form-group">
+            <mat-form-field class="example-full-width">
+              <input matInput placeholder="Password" formControlName="password" type="password">
+            </mat-form-field>
+          </div>
+        </div>
+
+        <div class="button-wrapper">
+          <button mat-flat-button color="primary">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

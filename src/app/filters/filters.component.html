@@ -1,0 +1,274 @@
+<div class="row" *ngIf="deviceXs">
+
+
+    <mat-drawer-container class="example-container" [hasBackdrop]="true">
+        <mat-drawer #drawer [mode]="slide">
+            <div class="col-xs-4 form-group">
+                <mat-card>
+                    <section class="example-section">
+                        <span class="example-list-section">
+                            <h3>Cost</h3>
+                            <ul>
+                                <li *ngFor="let list of costArray">
+                                    <mat-checkbox [checked]="true">
+                                        {{list}}
+                                    </mat-checkbox>
+                                </li>
+                            </ul>
+                        </span>
+                    </section>
+                    <section class="example-section">
+                        <span class="example-list-section">
+                            <mat-checkbox>
+                                Branch
+                            </mat-checkbox>
+
+                            <ul>
+
+                                <li *ngFor="let list of costArray">
+                                    <mat-checkbox [checked]="true">
+                                        {{list}}
+                                    </mat-checkbox>
+                                </li>
+                            </ul>
+                        </span>
+                    </section>
+                    <section class="example-section">
+                        <span class="example-list-section">
+                            <mat-checkbox [(ngModel)]="checked">
+                                All
+                            </mat-checkbox>
+
+                            <ul>
+
+                                <li *ngFor="let list of costArray">
+                                    <mat-checkbox [checked]="checked">
+                                        {{list}}
+                                    </mat-checkbox>
+                                </li>
+                            </ul>
+                        </span>
+                    </section>
+
+
+                </mat-card>
+
+
+            </div>
+
+        </mat-drawer>
+
+
+        <mat-drawer-content>
+
+            <button mat-raised-button (click)="drawer.toggle()">Filters</button>
+            <div class="col-xs-8 form-group">
+                <mat-card *ngFor="let list of costArray">
+                    <div class="row">
+                        <div class="col-sm-4 form-group" style="margin-top: 10%;margin-left: 10%;">
+                            <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg"
+                                alt="Photo of a Shiba Inu">
+                        </div>
+                        <div class="col-sm-4 form-group" style="margin-top: 10%;margin-left: 10%;">
+                            <mat-card-content>
+                                <div class="row" style="align-items: center;">
+                                    <div>Title</div>
+                                </div>
+                                <div class="col-sm-2" style="align-items: left;">
+
+                                    <div>Author</div>
+                                    <div>SUBJECT</div>
+                                    <div>Type</div>
+
+
+                                </div>
+                                <div style="text-align: right;">100/-</div>
+
+                            </mat-card-content>
+                        </div>
+
+                    </div>
+                </mat-card>
+            </div>
+
+        </mat-drawer-content>
+    </mat-drawer-container>
+
+
+</div>
+
+
+<div class="row" *ngIf="deviceSm">
+    <div class="col-sm-4 form-group">
+        <mat-card>
+            <section class="example-section">
+                <span class="example-list-section">
+                    <h3>Cost</h3>
+                    <ul>
+                        <li *ngFor="let list of costArray">
+                            <mat-checkbox [checked]="true">
+                                {{list}}
+                            </mat-checkbox>
+                        </li>
+                    </ul>
+                </span>
+            </section>
+            <section class="example-section">
+                <span class="example-list-section">
+                    <mat-checkbox>
+                        Branch
+                    </mat-checkbox>
+
+                    <ul>
+
+                        <li *ngFor="let list of costArray">
+                            <mat-checkbox [checked]="true">
+                                {{list}}
+                            </mat-checkbox>
+                        </li>
+                    </ul>
+                </span>
+            </section>
+            <section class="example-section">
+                <span class="example-list-section">
+                    <mat-checkbox [(ngModel)]="checked">
+                        All
+                    </mat-checkbox>
+
+                    <ul>
+
+                        <li *ngFor="let list of costArray">
+                            <mat-checkbox [checked]="checked">
+                                {{list}}
+                            </mat-checkbox>
+                        </li>
+                    </ul>
+                </span>
+            </section>
+
+
+        </mat-card>
+    </div>
+    <div class="col-sm-8 form-group">
+        <app-books-list></app-books-list>
+    </div>
+</div>
+
+<div class="row" *ngIf="deviceMd">
+    <div class="col-md-4 form-group">
+        <mat-card>
+            <section class="example-section">
+                <span class="example-list-section">
+                    <h3>Cost</h3>
+                    <ul>
+                        <li *ngFor="let list of costArray">
+                            <mat-checkbox [checked]="true">
+                                {{list}}
+                            </mat-checkbox>
+                        </li>
+                    </ul>
+                </span>
+            </section>
+            <section class="example-section">
+                <span class="example-list-section">
+                    <mat-checkbox>
+                        Branch
+                    </mat-checkbox>
+
+                    <ul>
+
+                        <li *ngFor="let list of costArray">
+                            <mat-checkbox [checked]="true">
+                                {{list}}
+                            </mat-checkbox>
+                        </li>
+                    </ul>
+                </span>
+            </section>
+            <section class="example-section">
+                <span class="example-list-section">
+                    <mat-checkbox [(ngModel)]="checked">
+                        All
+                    </mat-checkbox>
+
+                    <ul>
+
+                        <li *ngFor="let list of costArray">
+                            <mat-checkbox [checked]="checked">
+                                {{list}}
+                            </mat-checkbox>
+                        </li>
+                    </ul>
+                </span>
+            </section>
+
+
+        </mat-card>
+
+    </div>
+
+    <div class="col-md-8 form-group">
+        <app-books-list></app-books-list>
+    </div>
+
+</div>
+<div class="row" *ngIf="deviceXl">
+    <div class="col-lg-4 form-group">
+        <mat-card>
+            <section class="example-section">
+                <span class="example-list-section">
+                    <h3>Cost</h3>
+                    <ul>
+                        <li *ngFor="let list of costArray">
+                            <mat-checkbox [checked]="true">
+                                {{list}}
+                            </mat-checkbox>
+                        </li>
+                    </ul>
+                </span>
+            </section>
+            <section class="example-section">
+                <span class="example-list-section">
+                    <mat-checkbox>
+                        Branch
+                    </mat-checkbox>
+
+                    <ul>
+
+                        <li *ngFor="let list of costArray">
+                            <mat-checkbox [checked]="true">
+                                {{list}}
+                            </mat-checkbox>
+                        </li>
+                    </ul>
+                </span>
+            </section>
+            <section class="example-section">
+                <span class="example-list-section">
+                    <mat-checkbox [(ngModel)]="checked">
+                        All
+                    </mat-checkbox>
+
+                    <ul>
+
+                        <li *ngFor="let list of costArray">
+                            <mat-checkbox [checked]="checked">
+                                {{list}}
+                            </mat-checkbox>
+                        </li>
+                    </ul>
+                </span>
+            </section>
+
+
+        </mat-card>
+    </div>
+    <div class="col-lg-8 form-group">
+        <app-books-list></app-books-list>
+    </div>
+
+
+
+
+
+</div>
