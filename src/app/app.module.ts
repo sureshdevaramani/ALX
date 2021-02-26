@@ -19,12 +19,14 @@ import { FiltersComponent } from './filters/filters.component';
 import { BooksListComponent } from './books-list/books-list.component';
 import { PostBookComponent } from './post-book/post-book.component';
 import { UsePageComponent } from './use-page/use-page.component';
+import { ShowBookComponent } from './show-book/show-book.component';
+import { ShowUploadsComponent } from './show-uploads/show-uploads.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginPageComponent,
-    TestComponent,HeaderComponent, FiltersComponent, BooksListComponent, PostBookComponent, UsePageComponent
+    TestComponent,HeaderComponent, FiltersComponent, BooksListComponent, PostBookComponent, UsePageComponent, ShowBookComponent, ShowUploadsComponent
   ],
   imports: [
     BrowserModule,
