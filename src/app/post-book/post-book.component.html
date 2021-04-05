@@ -1,130 +1,134 @@
-<div class="row">
-  <div class="col-md-5 form-group">
-    <label>Upload a Image</label>
-    <mat-form-field>
-      <ngx-mat-file-input #Image placeholder="Basic Input" (change)="handleFileInput($event.target.files)">
-      </ngx-mat-file-input>
-      <mat-icon matSuffix>folder</mat-icon>
-    </mat-form-field>
-    <img width="50%" *ngIf="imageUrl" [src]="imageUrl" class="image">
-
-  </div>
-  <div class="col-md-5 form-group">
-    <mat-form-field class="example-full-width">
-      <input matInput placeholder="Cost">
-    </mat-form-field>
-  </div>
-
-</div>
-<div class="row">
-  <div class="col-md-5">
-    <div class="row">
-      <mat-form-field class="example-full-width">
-        <input matInput placeholder="Name">
-      </mat-form-field>
-    </div>
-    <div class="row">
-
-      <mat-form-field class="example-full-width">
-        <input matInput placeholder="Name">
-      </mat-form-field>
-
-    </div>
-    <div class="row">
-      <mat-form-field class="example-full-width">
-        <input matInput placeholder="Name">
-      </mat-form-field>
-    </div>
-    <div class="row">
-      <mat-select [(ngModel)]="selectedValue" name="food">
-        <mat-option *ngFor="let bookType of bookTypeArr" [value]="bookType">
-          {{bookType}}
-        </mat-option>
-      </mat-select>
-    </div>
-    <div class="row">
-      <mat-form-field class="example-full-width">
-        <input matInput placeholder="Name">
-      </mat-form-field>
-    </div>
-    <div class="row">
-      <mat-select [(ngModel)]="selectedValue" name="food">
-        <mat-option *ngFor="let bookType of bookTypeArr" [value]="bookType">
-          {{bookType}}
-        </mat-option>
-      </mat-select>
-    </div>
-    <div class="row">
-      <mat-form-field class="example-full-width">
-        <input matInput placeholder="Name">
-      </mat-form-field>
-    </div>
-    <div class="row">
-      <mat-form-field class="example-full-width">
-        <input matInput placeholder="Name">
-      </mat-form-field>
-    </div>
-
-  </div>
-  <div class="col-md-5">
-    <div class="row">
-      <mat-select [(ngModel)]="selectedValue" name="food">
-        <mat-option *ngFor="let bookType of bookTypeArr" [value]="bookType">
-          {{bookType}}
-        </mat-option>
-      </mat-select>
-    </div>
-    <div class="row">
-      <mat-radio-group aria-label="Select an option">
-        <mat-radio-button value="1">Option 1</mat-radio-button>
-        <mat-radio-button value="2">Option 2</mat-radio-button>
-      </mat-radio-group>
-    </div>
-    <div class="row">
-      <mat-radio-group aria-label="Select an option">
-        <mat-radio-button value="1">Option 1</mat-radio-button>
-        <mat-radio-button value="2">Option 2</mat-radio-button>
-      </mat-radio-group>
-    </div>
-    <div class="row">
-      <mat-radio-group aria-label="Select an option">
-        <mat-radio-button value="1">Option 1</mat-radio-button>
-        <mat-radio-button value="2">Option 2</mat-radio-button>
-        <mat-radio-button value="2">Option 2</mat-radio-button>
-      </mat-radio-group>
-    </div>
-    <div class="row">
-      <mat-form-field class="example-full-width">
-        <input matInput placeholder="Name" type="text">
-      </mat-form-field>
-    </div>
-  </div>
-</div>
-
-
-<!-- 
 <form [formGroup]="myForm" (ngSubmit)="submitForm()" novalidate>
+  <div class="row">
+    <div class="col-md-5 form-group">
+      <label>Upload a Image</label>
+      <mat-form-field>
+        <ngx-mat-file-input #Image placeholder="Basic Input" (change)="handleFileInput($event.target.files)">
+        </ngx-mat-file-input>
+        <mat-icon matSuffix>folder</mat-icon>
+      </mat-form-field>
+      <img width="50%" *ngIf="imageUrl" [src]="imageUrl" class="image">
+
+    </div>
+    <div class="col-md-5 form-group">
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="Cost" formControlName="cost" >
+      </mat-form-field>
+    </div>
+
+  </div>
+  <div class="row">
+    <div class="col-md-5">
+      <div class="row">
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Name">
+        </mat-form-field>
+      </div>
+      <div class="row">
+
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Author Name" formControlName="authorName">
+        </mat-form-field>
+
+      </div>
+      <div class="row">
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Page Count" formControlName="pageCount">
+        </mat-form-field>
+      </div>
+      <div class="row">
+        <mat-select name="food">
+          <mat-option *ngFor="let bookType of bookTypeArr" [value]="bookType">
+            {{bookType}}
+          </mat-option>
+        </mat-select>
+      </div>
+      <div class="row">
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Subject" formControlName="subject">
+        </mat-form-field>
+      </div>
+      <div class="row">
+        <mat-select formControlName="bookType" name="food">
+          <mat-option *ngFor="let bookType of bookTypeArr" [value]="bookType">
+            {{bookType}}
+          </mat-option>
+        </mat-select>
+      </div>
+      <div class="row">
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Publisher" formControlName="publisher">
+        </mat-form-field>
+      </div>
+      <div class="row">
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Edition" formControlName="edition">
+        </mat-form-field>
+      </div>
+
+    </div>
+    <div class="col-md-5">
+      <div class="row">
+        <mat-select formControlName="bookCondition" name="food">
+          <mat-option *ngFor="let bookCondition of bookConditionArr" [value]="bookCondition">
+            {{bookCondition}}
+          </mat-option>
+        </mat-select>
+      </div>
+      <!-- <div class="row">
+        <mat-radio-group aria-label="Select an option">
+          <mat-radio-button value="1">Option 1</mat-radio-button>
+          <mat-radio-button value="2">Option 2</mat-radio-button>
+        </mat-radio-group>
+      </div>
+      <div class="row">
+        <mat-radio-group aria-label="Select an option">
+          <mat-radio-button value="1">Option 1</mat-radio-button>
+          <mat-radio-button value="2">Option 2</mat-radio-button>
+        </mat-radio-group>
+      </div>
+      <div class="row">
+        <mat-radio-group aria-label="Select an option">
+          <mat-radio-button value="1">Option 1</mat-radio-button>
+          <mat-radio-button value="2">Option 2</mat-radio-button>
+          <mat-radio-button value="2">Option 2</mat-radio-button>
+        </mat-radio-group>
+      </div> -->
+      <div class="row">
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Name" type="text">
+        </mat-form-field>
+      </div>
+    </div>
+  </div>
+  <div class="button-wrapper">
+    <button mat-flat-button color="primary">Submit</button>
+  </div>
+</form>
+
+
+<!-- <form [formGroup]="myForm" (ngSubmit)="submitForm()" novalidate>
 
     <div class="row">
       <div class="col-xl-5 form-group">
-        
-            <mat-label>Favorite food</mat-label>
-            <mat-select [(ngModel)]="selectedValue" formControlName="bookType" name="food">
-              <mat-option *ngFor="let bookType of bookTypeArr" [value]="bookType">
-                {{bookType}}
-              </mat-option>
-            </mat-select>
-        
-          
+
+        <mat-label>Favorite food</mat-label>
+        <mat-select [(ngModel)]="selectedValue" formControlName="bookType" name="food">
+          <mat-option *ngFor="let bookType of bookTypeArr" [value]="bookType">
+            {{bookType}}
+          </mat-option>
+        </mat-select>
+
+
       </div>
     </div>
-    
-      <div class="row">
+
+    <div class="row">
       <div class="col-sm-5 form-group">
         <mat-form-field class="example-full-width">
           <input matInput placeholder="Name" formControlName="name">
         </mat-form-field>
-  
+
       </div>
     </div>
     <div class="row">
@@ -132,7 +136,7 @@
         <mat-form-field class="example-full-width">
           <input matInput placeholder="Author Name" formControlName="authorName">
         </mat-form-field>
-  
+
       </div>
     </div>
     <div class="row">
@@ -140,58 +144,58 @@
         <mat-form-field class="example-full-width">
           <input matInput placeholder="Page Count" formControlName="pageCount">
         </mat-form-field>
-  
+
       </div>
     </div>
     <div class="row">
-        <div class="col-sm-5 form-group">
-            <mat-label>Favorite food</mat-label>
-            <mat-select  formControlName="bookCondition" name="food">
-              <mat-option *ngFor="let bookCondition of bookConditionArr" [value]="bookCondition">
-                {{bookCondition}}
-              </mat-option>
-            </mat-select>
-        
-        </div>
+      <div class="col-sm-5 form-group">
+        <mat-label>Favorite food</mat-label>
+        <mat-select formControlName="bookCondition" name="food">
+          <mat-option *ngFor="let bookCondition of bookConditionArr" [value]="bookCondition">
+            {{bookCondition}}
+          </mat-option>
+        </mat-select>
+
       </div>
-      <div class="row">
-        <div class="col-sm-5 form-group">
-          <mat-form-field class="example-full-width">
-            <input matInput placeholder="Publisher" formControlName="publisher">
-          </mat-form-field>
-    
-        </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-5 form-group">
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Publisher" formControlName="publisher">
+        </mat-form-field>
+
       </div>
-      <div class="row">
-        <div class="col-sm-5 form-group">
-          <mat-form-field class="example-full-width">
-            <input matInput placeholder="Edition" formControlName="edition">
-          </mat-form-field>
-    
-        </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-5 form-group">
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Edition" formControlName="edition">
+        </mat-form-field>
+
       </div>
-      <div class="row">
-        <div class="col-sm-5 form-group">
-          <mat-form-field class="example-full-width">
-            <input matInput placeholder="Cost" formControlName="cost">
-          </mat-form-field>
-    
-        </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-5 form-group">
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Cost" formControlName="cost">
+        </mat-form-field>
+
       </div>
-      <div class="row">
-        <div class="col-sm-5 form-group">
-          <mat-form-field class="example-full-width">
-            <input matInput placeholder="Subject" formControlName="subject">
-          </mat-form-field>
-    
-        </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-5 form-group">
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Subject" formControlName="subject">
+        </mat-form-field>
+
       </div>
-      <mat-form-field>
-        <ngx-mat-file-input formControlName="imageUrl" placeholder="Basic Input" ></ngx-mat-file-input>
-        <mat-icon matSuffix>folder</mat-icon>
-      </mat-form-field>
-   
-      
+    </div>
+    <mat-form-field>
+      <ngx-mat-file-input formControlName="imageUrl"  (onchange)="handleUpload($event)" placeholder="Basic Input"></ngx-mat-file-input>
+      <mat-icon matSuffix>folder</mat-icon>
+    </mat-form-field>
+
+
     <div class="button-wrapper">
       <button mat-flat-button color="primary">Submit</button>
     </div>
@@ -204,4 +208,4 @@
       </mat-form-field>
 
     </div>
-  </div> -->
+  </div>-->

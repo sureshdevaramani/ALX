@@ -9,6 +9,7 @@ import { PostBookComponent } from './post-book/post-book.component';
 import { UsePageComponent } from './use-page/use-page.component';
 import { ShowBookComponent } from './show-book/show-book.component';
 import { ShowUploadsComponent } from './show-uploads/show-uploads.component';
+import { Test2Component } from './test2/test2.component';
 
 const routes: Routes = [
   { path: 'login', component:LoginPageComponent},
@@ -19,7 +20,8 @@ const routes: Routes = [
   { path: 'postBook', component:PostBookComponent},
   { path: 'userPage', component:UsePageComponent},
   { path: 'showBook', component:ShowBookComponent},
-  { path: 'showUploads', component:ShowUploadsComponent}
+  { path: 'showUploads', component:ShowUploadsComponent},
+  { path: 'test2', component:Test2Component}
   
 
     

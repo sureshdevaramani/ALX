@@ -66,8 +66,8 @@
                 <mat-card *ngFor="let list of costArray">
                     <div class="row">
                         <div class="col-sm-4 form-group" style="margin-top: 10%;margin-left: 10%;">
-                            <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg"
-                                alt="Photo of a Shiba Inu">
+                            <img mat-card-image src="https://techboomers.com/wp-content/uploads/2017/12/sites-like-amazon-for-buying-books-h.jpg"
+                style="align-self: flex-start;margin-top: 10%;width: 100%;height: auto;" alt="Photo of a Shiba Inu">
                         </div>
                         <div class="col-sm-4 form-group" style="margin-top: 10%;margin-left: 10%;">
                             <mat-card-content>
@@ -171,26 +171,39 @@
             </section>
             <section class="example-section">
                 <span class="example-list-section">
+
                     <mat-checkbox>
                         Branch
                     </mat-checkbox>
 
                     <ul>
 
-                        <li *ngFor="let list of costArray">
-                            <mat-checkbox [checked]="true">
-                                {{list}}
+                        <li *ngFor="let course of emptyArr; let i = index">
+                            <mat-checkbox  (change)="setAll($event)">
+                                {{course.course.courseName}}
+                         
+
                             </mat-checkbox>
+                            <ul *ngIf="showCheckBox" >
+                                <li *ngFor="let branch of course.branch">
+                                   
+                                    <mat-checkbox (change)="innerCheckBox($event)" > {{branch.branchName}}</mat-checkbox>
+                                </li>
+                                
+                            </ul>
+
                         </li>
+                       
                     </ul>
                 </span>
+                <input type="checkbox" name="myData" #myCheckbox>
             </section>
-            <section class="example-section">
+             <section class="example-section">
                 <span class="example-list-section">
                     <mat-checkbox [(ngModel)]="checked">
                         All
                     </mat-checkbox>
-
+                    
                     <ul>
 
                         <li *ngFor="let list of costArray">
@@ -236,8 +249,15 @@
                     <ul>
 
                         <li *ngFor="let list of costArray">
-                            <mat-checkbox [checked]="true">
+                            <mat-checkbox (change)="setAll($event)">
                                 {{list}}
+                                <ul >
+                                    <li *ngFor="let list of costArray">
+                                       
+                                        <mat-checkbox > {{list}}</mat-checkbox>
+                                    </li>
+                                </ul>
+
                             </mat-checkbox>
                         </li>
                     </ul>

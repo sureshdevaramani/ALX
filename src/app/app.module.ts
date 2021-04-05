@@ -21,12 +21,13 @@ import { PostBookComponent } from './post-book/post-book.component';
 import { UsePageComponent } from './use-page/use-page.component';
 import { ShowBookComponent } from './show-book/show-book.component';
 import { ShowUploadsComponent } from './show-uploads/show-uploads.component';
+import { Test2Component } from './test2/test2.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginPageComponent,
-    TestComponent,HeaderComponent, FiltersComponent, BooksListComponent, PostBookComponent, UsePageComponent, ShowBookComponent, ShowUploadsComponent
+    TestComponent,HeaderComponent, FiltersComponent, BooksListComponent, PostBookComponent, UsePageComponent, ShowBookComponent, ShowUploadsComponent, Test2Component
   ],
   imports: [
     BrowserModule,
